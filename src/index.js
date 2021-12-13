@@ -6,10 +6,22 @@ import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import HomePage from './pages/HomePage';
+import DetailPage from './pages/DetailPage';
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App/>}>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path=":catId" element={<DetailPage/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
