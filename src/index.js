@@ -16,9 +16,9 @@ ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App/>}>
-            <Route path="/" element={<HomePage/>}/>
-            <Route path=":catId" element={<DetailPage/>}/>
+          <Route path="/" element={<App />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path=":catId" element={<DetailPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
