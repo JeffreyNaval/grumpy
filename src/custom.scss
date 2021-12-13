@@ -1,0 +1,23 @@
+.navbar-brand {
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.container {
+  max-width: 767.98px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+
+  &.heart {
+    color: #dc3545;
+  }
+}
+
+.no-underline {
+  text-decoration: none;
+}
