@@ -21,3 +21,92 @@
 .no-underline {
   text-decoration: none;
 }
+
+.object-contain {
+  object-fit: contain;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.page-nav {
+  color: $gray-800;
+
+  .back-button {
+    color: $gray-800;
+  }
+
+  .title {
+    font-size: $font-size-lg;
+    margin: 0;
+  }
+}
+
+.cat-card {
+  display: block;
+  color: $gray-700;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid $gray-400;
+  text-decoration: none;
+  background-color: $white;
+  font-size: $font-size-base;
+
+  &:hover {
+    color: $gray-900;
+  }
+
+  .cat-image {
+    background-color: $gray-700;
+  }
+
+  .cat-label {
+    @extend .p-3;
+    border-top: 1px solid $gray-400;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: $font-size-base;
+  }
+
+  .cat-temperament {
+    font-size: $font-size-sm;
+    color: $gray-600;
+  }
+
+  .cat-id {
+    font-size: $font-size-base * 0.65;
+    color: $gray-600;
+    border: 1px solid $gray-500;
+    border-radius: 50px;
+    padding: 5px 10px;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .cat-description {
+    font-size: $font-size-sm;
+  }
+}
+
+.cat-breeds {
+  .cat-breed-image {
+    @extend .me-3;
+    width: 48px;
+    height: 48px;
+    background-color: $gray-700;
+    border: 1px solid $gray-400;
+  }
+
+  .title {
+    font-size: $font-size-base;
+    margin: 0;
+  }
+
+  .sub-title {
+    font-size: $font-size-base * .75;
+    margin: 0;
+  }
+}

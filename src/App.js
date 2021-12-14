@@ -14,14 +14,14 @@ function App() {
           <Navbar.Brand>
             <Link to="/">
               <img
-                alt="Meoww Browser"
+                alt="Meowstagram"
                 src={logo}
                 width="30"
                 height="30"
                 className="d-inline-block align-top"
               />
               &nbsp;
-              Meoww Browser
+              Meowstagram
             </Link>
           </Navbar.Brand>
         </Container>
