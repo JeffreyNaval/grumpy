@@ -1,14 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-
-// The cat API base URL
-const baseUrl = 'https://api.thecatapi.com/v1';
-
-// Include API key on header
-const requestParams = {
-  headers: {
-    'x-api-key': '89c72587-01b5-49c0-93ca-263055fb166e',
-  },
-};
+import catAPI from './catAPI';
 
 const initialState = {
   data: [],
@@ -19,8 +10,8 @@ export const getCatBreeds = createAsyncThunk(
   'cats/getCatBreeds',
   async () => {
     // Fetch cat breed list from API
-    return fetch(`${baseUrl}/breeds`, requestParams)
-      .then((res) => res.json());
+    return catAPI.get('breeds')
+      .then((res) => res.data);
   }
 );
 
