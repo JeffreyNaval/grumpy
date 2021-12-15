@@ -52,7 +52,7 @@ function CatDetail({ data, status}) {
               </Ratio>
             </div>
             <div className="cat-label relative">
-              <div class="float-end">
+              <div className="float-end">
                 <p className="cat-id">{data.id}</p>
               </div>
               <div>

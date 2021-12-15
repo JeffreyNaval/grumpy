@@ -110,3 +110,14 @@
     margin: 0;
   }
 }
+
+.load-more {
+  display: block;
+  border: none;
+  background: none;
+  color: $gray-600;
+
+  &:hover {
+    color: $gray-900;
+  }
+}
