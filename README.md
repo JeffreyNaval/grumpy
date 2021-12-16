@@ -1,5 +1,7 @@
 # Coding Exercise for IONA
 
+![Meowstagram Screenshots](src/assets/screenshots.png)
+
 ## Libraries used
 - [x] react-router-dom
 - [x] react-bootstrap
