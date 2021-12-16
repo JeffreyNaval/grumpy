@@ -13,7 +13,7 @@
 - [x] eslint
 - [x] heroicons
 
-## More Features
+## More features
 - Crisp high quality SVG icons.
 - Cache the api request to improve the efficiency of data retrieval. It also improves user experience.
 - API spec test file `catsSlice.spec.js` to demo `jest`.
