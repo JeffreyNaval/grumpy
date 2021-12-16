@@ -4,13 +4,14 @@
 - [x] react-router-dom
 - [x] react-bootstrap
 - [x] axios
+- [x] axios-cache-adapter
 - [x] react-redux / redux-toolkit
 - [x] node-sass
 - [x] lodash
 - [x] eslint
 
 ## Features that's not in the instructions
-- Cache the api request to improves the efficiency of data retrieval. It also improves user experience.
+- Cache the api request to improve the efficiency of data retrieval. It also improves user experience.
 - API spec test file `catsSlice.spec.js` to demo `jest`.
 
 ## Layout improvements
