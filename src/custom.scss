@@ -7,9 +7,13 @@ a {
   }
 }
 
+.navbar {
+  border-bottom: 1px solid $gray-400;
+}
+
 .navbar-brand {
   a {
-    color: #fff;
+    color: #231F20;
     text-decoration: none;
   }
 }

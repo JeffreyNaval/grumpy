@@ -3,25 +3,24 @@ import { HeartIcon } from '@heroicons/react/solid'
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Link, Outlet } from 'react-router-dom';
 import logo from './assets/logo.svg';
+// import logo from './assets/meowstagram2.svg';
 import githubLogo from './assets/github.svg';
 import './App.scss';
 
 function App() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="white" variant="light">
         <Container>
           <Navbar.Brand>
             <Link to="/">
               <img
                 alt="Meowstagram"
                 src={logo}
-                width="30"
-                height="30"
+                width="auto"
+                height="35"
                 className="d-inline-block align-top"
               />
-              &nbsp;
-              Meowstagram
             </Link>
           </Navbar.Brand>
           <Nav.Link href="https://github.com/JeffreyNaval/grumpy" target="_blank" className="github-link">
