@@ -3,7 +3,6 @@ import { HeartIcon } from '@heroicons/react/solid'
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Link, Outlet } from 'react-router-dom';
 import logo from './assets/logo.svg';
-// import logo from './assets/meowstagram2.svg';
 import githubLogo from './assets/github.svg';
 import './App.scss';
 
