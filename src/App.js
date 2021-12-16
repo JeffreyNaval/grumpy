@@ -1,8 +1,9 @@
 import React from 'react';
 import { HeartIcon } from '@heroicons/react/solid'
-import { Container, Navbar } from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Link, Outlet } from 'react-router-dom';
-import logo from './logo.svg';
+import logo from './assets/logo.svg';
+import githubLogo from './assets/github.svg';
 // import { Counter } from './features/counter/Counter';
 import './App.scss';
 
@@ -24,6 +25,15 @@ function App() {
               Meowstagram
             </Link>
           </Navbar.Brand>
+          <Nav.Link href="https://github.com/JeffreyNaval/grumpy" target="_blank" className="github-link">
+            <img
+              alt="Github"
+              src={githubLogo}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />
+          </Nav.Link>
         </Container>
       </Navbar>
 

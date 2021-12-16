@@ -1,3 +1,12 @@
+a {
+  color: $gray-700;
+  text-decoration: none;
+
+  &:hover {
+    color: $gray-900;
+  }
+}
+
 .navbar-brand {
   a {
     color: #fff;
