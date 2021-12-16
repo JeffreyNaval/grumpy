@@ -32,43 +32,42 @@ export default function DetailPage() {
  * status changes.
  */
 function CatDetail({ data, status}) {
-  switch(status) {
-    case 'failed':
-      return <FailedToLoad/>
-
-    case 'idle':
-      return data ? (
-        <>
-          <div className="page-nav d-flex align-items-center">
-            <Link to={`/?breed=${data.breeds[0].id}`} className="me-2 back-button">
-              <ArrowLeftIcon className="icon"/>
-            </Link>
-            <h2 className="title">{data.breeds[0].name}</h2>
-          </div>
-          <div className="cat-card mt-3">
-            <div className="cat-image">
-              <Ratio aspectRatio="1x1">
-                <Image src={data.url} className="object-cover"/>
-              </Ratio>
-            </div>
-            <div className="cat-label relative">
-              <div className="float-end">
-                <p className="cat-id">{data.id}</p>
-              </div>
-              <div>
-                <h2>{data.breeds[0].name}</h2>
-                <p className="m-0">{data.breeds[0].origin}</p>
-                <p className="m-0 cat-temperament">{data.breeds[0].temperament}</p>
-              </div>
-            </div>
-            <div className="mx-3">
-              <p className='cat-description'>{data.breeds[0].description}</p>
-            </div>
-          </div>
-        </>
-      ) : <PageLoader/>
-
-    default:
-      return <PageLoader/>
+  if (status === 'failed') {
+    return <FailedToLoad/>
   }
+
+  if (status === 'success') {
+    return data ? (
+      <>
+        <div className="page-nav d-flex align-items-center">
+          <Link to={`/?breed=${data.breeds[0].id}`} className="me-2 back-button">
+            <ArrowLeftIcon className="icon"/>
+          </Link>
+          <h2 className="title">{data.breeds[0].name}</h2>
+        </div>
+        <div className="cat-card mt-3">
+          <div className="cat-image">
+            <Ratio aspectRatio="1x1">
+              <Image src={data.url} className="object-cover"/>
+            </Ratio>
+          </div>
+          <div className="cat-label relative">
+            <div className="float-end">
+              <p className="cat-id">{data.id}</p>
+            </div>
+            <div>
+              <h2>{data.breeds[0].name}</h2>
+              <p className="m-0">{data.breeds[0].origin}</p>
+              <p className="m-0 cat-temperament">{data.breeds[0].temperament}</p>
+            </div>
+          </div>
+          <div className="mx-3">
+            <p className='cat-description'>{data.breeds[0].description}</p>
+          </div>
+        </div>
+      </>
+    ) : <PageLoader/>
+  }
+
+  return <PageLoader/>
 }
