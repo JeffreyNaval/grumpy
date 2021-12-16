@@ -10,7 +10,7 @@ import { getCatById } from '../features/cats/catsSlice';
 export default function DetailPage() {
   const params = useParams();
   const dispatch = useDispatch();
-  const { data, status} = useSelector(state => state.cats.cat);
+  const { data, status } = useSelector(state => state.cats.cat);
 
   useEffect(() => {
     dispatch(getCatById(params.catId));
@@ -20,7 +20,7 @@ export default function DetailPage() {
     <Container>
       <main>
         <div className="mt-3">
-          <CatDetail data={data} status={status}/>
+          <CatDetail data={data} status={status} />
         </div>
       </main>
     </Container>
@@ -31,9 +31,9 @@ export default function DetailPage() {
  * Simple react component handle
  * status changes.
  */
-function CatDetail({ data, status}) {
+function CatDetail({ data, status }) {
   if (status === 'failed') {
-    return <FailedToLoad/>
+    return <FailedToLoad />
   }
 
   if (status === 'success') {
@@ -41,14 +41,14 @@ function CatDetail({ data, status}) {
       <>
         <div className="page-nav d-flex align-items-center">
           <Link to={`/?breed=${data.breeds[0].id}`} className="me-2 back-button">
-            <ArrowLeftIcon className="icon"/>
+            <ArrowLeftIcon className="icon" />
           </Link>
           <h2 className="title">{data.breeds[0].name}</h2>
         </div>
         <div className="cat-card mt-3">
           <div className="cat-image">
             <Ratio aspectRatio="1x1">
-              <Image src={data.url} className="object-cover"/>
+              <Image src={data.url} className="object-cover" />
             </Ratio>
           </div>
           <div className="cat-label relative">
@@ -66,8 +66,8 @@ function CatDetail({ data, status}) {
           </div>
         </div>
       </>
-    ) : <PageLoader/>
+    ) : <PageLoader />
   }
 
-  return <PageLoader/>
+  return <PageLoader />
 }

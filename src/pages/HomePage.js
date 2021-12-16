@@ -6,20 +6,20 @@ import CatBreed from '../features/cats/CatBreed'
 import SearchCatBreeds from '../features/cats/SearchCatBreeds'
 
 export default function HomePage() {
-  const [ searchParams ] = useSearchParams();
-  const [ searchText, setSearchText] = useState('');
-  const breed = searchParams.get("breed");
+  const [searchParams] = useSearchParams();
+  const [searchText, setSearchText] = useState('');
+  const breed = searchParams.get('breed');
 
   return (
     <Container>
       <main>
         <div className="mt-3">
-          { breed ? <CatBreed breed={breed}/> : (
+          {breed ? <CatBreed breed={breed} /> : (
             <>
               <div className="mt-3 mb-3">
                 <InputGroup>
                   <InputGroup.Text id="search-breed">
-                    <SearchIcon className="icon"/>
+                    <SearchIcon className="icon" />
                   </InputGroup.Text>
                   <FormControl
                     className="bg-white"
@@ -27,10 +27,10 @@ export default function HomePage() {
                     aria-describedby="search-breed"
                     autoFocus={true}
                     value={searchText}
-                    onChange={event => setSearchText(event.target.value)}/>
+                    onChange={event => setSearchText(event.target.value)} />
                 </InputGroup>
               </div>
-              <SearchCatBreeds search={searchText}/>
+              <SearchCatBreeds search={searchText} />
             </>
           )}
         </div>

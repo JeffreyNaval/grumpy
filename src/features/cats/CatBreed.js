@@ -34,7 +34,7 @@ export default function CatBreed({ breed }) {
       return (
         <button onClick={event => dispatch(getNextCatsByBreed())} className="load-more">
           <div>Click for more cats</div>
-          <ChevronDownIcon className="icon"/>
+          <ChevronDownIcon className="icon" />
         </button>
       )
     }
@@ -43,7 +43,7 @@ export default function CatBreed({ breed }) {
   }
 
   if (status === 'failed') {
-    return <FailedToLoad/>
+    return <FailedToLoad />
   }
 
   if (status === 'success') {
@@ -51,7 +51,7 @@ export default function CatBreed({ breed }) {
       <>
         <div className="page-nav d-flex align-items-center">
           <Link to="/" className="me-2 back-button">
-            <ArrowLeftIcon className="icon"/>
+            <ArrowLeftIcon className="icon" />
           </Link>
           {data.length > 0 ? (
             <h2 className="title">{data[0].breeds[0].name}</h2>
@@ -64,11 +64,11 @@ export default function CatBreed({ breed }) {
               <Link to={cat.id} className="cat-card">
                 <div className="cat-image">
                   <Ratio aspectRatio="1x1">
-                    <Image src={cat.url} className="object-cover"/>
+                    <Image src={cat.url} className="object-cover" />
                   </Ratio>
                 </div>
                 <div className="cat-label">
-                  <EyeIcon className="icon me-2"/>
+                  <EyeIcon className="icon me-2" />
                   Adore me
                 </div>
               </Link>
@@ -77,11 +77,11 @@ export default function CatBreed({ breed }) {
         </Row>
 
         <div className="d-flex justify-content-center my-4">
-          <PageButton/>
+          <PageButton />
         </div>
       </>
     )
   }
 
-  return <PageLoader/>
+  return <PageLoader />
 }

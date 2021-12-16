@@ -9,7 +9,7 @@ import FailedToLoad from '../../components/FailedToLoad'
 
 export default function CatBreeds({ search }) {
   const dispatch = useDispatch();
-  const { data, status} = useSelector(state => state.cats.breeds)
+  const { data, status } = useSelector(state => state.cats.breeds)
 
   // eslint-disable-next-line
   const [searchParams, setSearchParams] = useSearchParams();
@@ -19,7 +19,7 @@ export default function CatBreeds({ search }) {
   }, [dispatch])
 
   function getSearchResult() {
-    if (! search) {
+    if (!search) {
       return data;
     }
 
@@ -28,12 +28,12 @@ export default function CatBreeds({ search }) {
     });
   }
 
-  switch(status) {
+  switch (status) {
     case 'failed':
-      return <FailedToLoad/>;
+      return <FailedToLoad />;
 
     case 'loading':
-      return <PageLoader/>
+      return <PageLoader />
 
     default:
       return (
@@ -44,13 +44,13 @@ export default function CatBreeds({ search }) {
                 key={`breed-${i}`}
                 action
                 className="py-3 d-flex justify-content-between align-items-center no-underline"
-                onClick={(e) => setSearchParams({breed: breed.id})}>
+                onClick={(e) => setSearchParams({ breed: breed.id })}>
                 <div className='d-flex align-items-center'>
                   <div className="cat-breed-image rounded-circle overflow-hidden">
                     <Ratio aspectRatio="1x1">
                       <Image
                         src={`https://cdn2.thecatapi.com/images/${breed.reference_image_id}.jpg`}
-                        className="object-cover"/>
+                        className="object-cover" />
                     </Ratio>
                   </div>
                   <div>
@@ -58,7 +58,7 @@ export default function CatBreeds({ search }) {
                     <p className="sub-title">{breed.origin}</p>
                   </div>
                 </div>
-                <ChevronRightIcon className="icon"/>
+                <ChevronRightIcon className="icon" />
               </ListGroup.Item>
             ))}
           </ListGroup>

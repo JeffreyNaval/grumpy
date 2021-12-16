@@ -49,8 +49,8 @@ describe('getCatBreeds', () => {
     const action = {
       type: getCatBreeds.fulfilled.type,
       payload: [
-        {id: 1},
-        {id: 2},
+        { id: 1 },
+        { id: 2 },
       ]
     };
 
@@ -58,8 +58,8 @@ describe('getCatBreeds', () => {
 
     expect(state.breeds).toEqual({
       data: [
-        {id: 1},
-        {id: 2},
+        { id: 1 },
+        { id: 2 },
       ],
       status: 'success',
     });
@@ -69,8 +69,8 @@ describe('getCatBreeds', () => {
     const action = {
       type: getCatBreeds.rejected.type,
       payload: [
-        {id: 1},
-        {id: 2},
+        { id: 1 },
+        { id: 2 },
       ]
     };
 
@@ -183,9 +183,9 @@ describe('getNextCatsByBreed', () => {
       type: getNextCatsByBreed.fulfilled.type,
       payload: {
         data: [
-          {id: 1},
-          {id: 2},
-          {id: 3},
+          { id: 1 },
+          { id: 2 },
+          { id: 3 },
         ],
         page: 2,
         totalCount: 10
@@ -199,9 +199,9 @@ describe('getNextCatsByBreed', () => {
 
     expect(state.breed).toEqual(expect.objectContaining({
       data: [
-        {id: 1},
-        {id: 2},
-        {id: 3},
+        { id: 1 },
+        { id: 2 },
+        { id: 3 },
       ],
       page: 2,
       newCatCount: 3,
@@ -214,9 +214,9 @@ describe('getNextCatsByBreed', () => {
       type: getNextCatsByBreed.fulfilled.type,
       payload: {
         data: [
-          {id: 1},
-          {id: 2},
-          {id: 3},
+          { id: 1 },
+          { id: 2 },
+          { id: 3 },
         ],
         page: 2,
         totalCount: 10
@@ -226,26 +226,28 @@ describe('getNextCatsByBreed', () => {
       },
     };
 
-    const state = catsReducer({...initialState, ...{
-      breed: {
-        id: 'my-breed',
-        data: [
-          {id: 1},
-          {id: 2},
-        ],
-        status: 'idle',
-        page: 1,
-        totalCount: 10,
-        newCatCount: 0,
-        pagerStatus: 'idle',
+    const state = catsReducer({
+      ...initialState, ...{
+        breed: {
+          id: 'my-breed',
+          data: [
+            { id: 1 },
+            { id: 2 },
+          ],
+          status: 'idle',
+          page: 1,
+          totalCount: 10,
+          newCatCount: 0,
+          pagerStatus: 'idle',
+        }
       }
-    }}, action);
+    }, action);
 
     expect(state.breed).toEqual(expect.objectContaining({
       data: [
-        {id: 1},
-        {id: 2},
-        {id: 3},
+        { id: 1 },
+        { id: 2 },
+        { id: 3 },
       ],
       page: 2,
       newCatCount: 1,

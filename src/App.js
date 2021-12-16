@@ -4,7 +4,6 @@ import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Link, Outlet } from 'react-router-dom';
 import logo from './assets/logo.svg';
 import githubLogo from './assets/github.svg';
-// import { Counter } from './features/counter/Counter';
 import './App.scss';
 
 function App() {
@@ -37,12 +36,12 @@ function App() {
         </Container>
       </Navbar>
 
-      <Outlet/>
+      <Outlet />
 
       <footer>
         <Container>
           <div className="d-flex text-center justify-content-center py-4">
-            Made with <HeartIcon className="icon heart"/> by
+            Made with <HeartIcon className="icon heart" /> by
             <a href="https://github.com/JeffreyNaval" target="_blank" rel="noreferrer" className="d-block ms-1">
               Jeffrey Naval
             </a>

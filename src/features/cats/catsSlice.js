@@ -104,11 +104,11 @@ export const catsSlice = createSlice({
         state.breeds.data = [];
         state.breeds.status = 'failed';
       })
-      .addCase(getCatsByBreed.pending, (state, {meta}) => {
+      .addCase(getCatsByBreed.pending, (state, { meta }) => {
         state.breed.data = [];
         state.breed.status = 'loading';
       })
-      .addCase(getCatsByBreed.fulfilled, (state, {payload, meta}) => {
+      .addCase(getCatsByBreed.fulfilled, (state, { payload, meta }) => {
         // We want to set failed status when the user
         // search for an invalid cat breed.
         // The API does not handle this automatically.
