@@ -11,8 +11,10 @@
 - [x] node-sass
 - [x] lodash
 - [x] eslint
+- [x] heroicons
 
 ## Features that's not in the instructions
+- Crisp high quality SVG icons.
 - Cache the api request to improve the efficiency of data retrieval. It also improves user experience.
 - API spec test file `catsSlice.spec.js` to demo `jest`.
 
