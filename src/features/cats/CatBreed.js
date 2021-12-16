@@ -14,7 +14,7 @@ export default function CatBreed({ breed }) {
 
   useEffect(() => {
     dispatch(getCatsByBreed(breed));
-  }, []);
+  }, [dispatch, breed]);
 
   function PageButton() {
     if (pagerStatus === 'loading') {

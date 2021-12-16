@@ -6,7 +6,7 @@ import CatBreed from '../features/cats/CatBreed'
 import SearchCatBreeds from '../features/cats/SearchCatBreeds'
 
 export default function HomePage() {
-  const [ searchParams, setSearchParams ] = useSearchParams();
+  const [ searchParams ] = useSearchParams();
   const [ searchText, setSearchText] = useState('');
   const breed = searchParams.get("breed");
 

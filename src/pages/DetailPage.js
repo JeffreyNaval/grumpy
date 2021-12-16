@@ -1,6 +1,6 @@
 import { ArrowLeftIcon } from '@heroicons/react/solid';
 import React, { useEffect } from 'react'
-import { Container, Image, Ratio, Spinner } from 'react-bootstrap';
+import { Container, Image, Ratio } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom'
 import FailedToLoad from '../components/FailedToLoad';
@@ -14,7 +14,7 @@ export default function DetailPage() {
 
   useEffect(() => {
     dispatch(getCatById(params.catId));
-  }, []);
+  }, [dispatch, params]);
 
   return (
     <Container>

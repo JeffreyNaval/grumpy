@@ -1,20 +1,22 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Card, ListGroup, Spinner, Image, Ratio } from 'react-bootstrap'
+import { Card, ListGroup, Image, Ratio } from 'react-bootstrap'
 import { ChevronRightIcon } from '@heroicons/react/solid'
-import { getCatBreeds, setBreed } from './catsSlice'
+import { getCatBreeds } from './catsSlice'
 import { useSearchParams } from 'react-router-dom'
 import PageLoader from '../../components/PageLoader'
 import FailedToLoad from '../../components/FailedToLoad'
 
 export default function CatBreeds({ search }) {
   const dispatch = useDispatch();
-  const [searchParams, setSearchParams] = useSearchParams();
   const { data, status} = useSelector(state => state.cats.breeds)
+
+  // eslint-disable-next-line
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     dispatch(getCatBreeds())
-  }, [])
+  }, [dispatch])
 
   function getSearchResult() {
     if (! search) {
