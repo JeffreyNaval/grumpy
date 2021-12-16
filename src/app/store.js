@@ -5,4 +5,5 @@ export const store = configureStore({
   reducer: {
     cats: catsReducer,
   },
+  devTools: process.env.NODE_ENV === 'development',
 });
